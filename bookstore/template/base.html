@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="logo">
+                <img src="/static/images/logobook.png" alt="" width="180px" height="150px">
+            </div>
+            <div class="menu">
+                <a href="{% url 'homepage' %}">Home</a>
+                <a href="">Login</a>
+                <a href="{% url 'UserReg' %}">Register</a>
+            </div>
+        </div>
+        <div class="content">
+            {%block contents%}
+            {%endblock%}
+        </div>
+        <div class="footer">
+            <div class="left">
+                <p>mybooks@online.com</p>
+                <p>+04872683505</p>
+            </div>
+            <div class="center">
+                <p>@bookstore.all rights reserved</p>
+            </div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
