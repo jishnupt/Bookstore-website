@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+{%block contents%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/detail_view.css">
+</head>
+<body>
+    <div class="detail_view_main">
+        <div class="detail_view_left">
+            <div class="card">
+                <h2>{{book.name}}</h2>
+                <img src="/{{book.image}}" alt="" width="220" height="320">
+                <p>Price : {{book.price}}₹</p>
+                <p>Rating : {{book.review}}⭐</p>
+            </div>
+        </div>
+        <div class="detail_view_right">
+                <p>{{book.author}}</p>
+                <p>{{book.description}}</p>
+        </div>
+
+    </div>
+
+        
+</body>
+</html>
+{%endblock%}

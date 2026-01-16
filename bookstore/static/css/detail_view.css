@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.detail_view_main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    gap: 40px;
+}
+
+.detail_view_left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 320px;
+}
+
+.card h2 {
+    font-size: 22px;
+    color: #111;
+    margin-bottom: 15px;
+}
+
+.card img {
+    width: 220px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.detail_view_right {
+    flex: 2;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+.detail_view_right p:first-child {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.detail_view_right p:last-child {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+@media (max-width: 900px) {
+    .detail_view_main {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .detail_view_left,
+    .detail_view_right {
+        width: 100%;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .card img {
+        width: 200px;
+        height: 290px;
+    }
+}
+
+@media (max-width: 480px) {
+    .detail_view_main {
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .card h2 {
+        font-size: 20px;
+    }
+
+    .detail_view_right {
+        padding: 18px;
+    }
+}

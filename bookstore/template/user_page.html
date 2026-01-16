@@ -6,27 +6,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/static/css/hom.css">
+    <link rel="stylesheet" href="/static/css/user_page.css">
 </head>
 <body>
-    <div class="home_main">
-        <div class="intro_section">
-            <h1>Your reading journey starts here.</h1> <br><br>
-            <img src="/static/images/logobook.png" alt="" width="230px" height="210px">
+
+    <div class="home_main1">
+        <div class="intro_section1">
+            <h3>Your next favorite book is just a click away</h3>
         </div>
-        <div class="books_section">
+        <div class="books_section1">
             {% for i in book %}
-            <div class="book_card">
+            <div class="book_card1">
                 <a href="{% url 'detail_page' i.id %}">
                 <h4>{{i.name}}</h4>
                 <img src="{{i.image}}" alt="" width="180px" height="250px">
                 <p>Price : {{i.price}}₹</p>
                 <p>Rating : {{i.review}}⭐</p>
+                <a href=""><button>BUY NOW</button></a>
+                <a href="{% url 'Addcart' i.id %}"><button>ADD CART</button></a>
                 </a>
             </div>
             {% endfor %}
         </div>
     </div>
+
         
 </body>
 </html>
