@@ -13,8 +13,14 @@
                 <img src="/static/images/logobook.png" alt="" width="180px" height="150px">
             </div>
             <div class="menu">
+                {% if user.is_authenticated %}
+                <a href="">{{request.user}}</a>
+                <a href="{% url 'user_dashboard' %}">Books</a>
+                <a href="{% url 'logout' %}">Logout</a>
+                <a href="{% url 'Cart_items' %}">Cart</a>
+                {% endif %}
                 <a href="{% url 'homepage' %}">Home</a>
-                <a href="">Login</a>
+                <a href="{% url 'login' %}">Login</a>
                 <a href="{% url 'UserReg' %}">Register</a>
             </div>
         </div>
@@ -26,6 +32,7 @@
             <div class="left">
                 <p>mybooks@online.com</p>
                 <p>+04872683505</p>
+                <a href="{% url 'AdminReg' %}">Admin</a>
             </div>
             <div class="center">
                 <p>@bookstore.all rights reserved</p>
